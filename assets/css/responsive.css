@@ -1,0 +1,156 @@
+/* ==========================================================================
+   RENTIFY — Responsive Overrides
+   Breakpoints follow Bootstrap 5.3 grid: xl 1200, lg 992, md 768, sm 576
+   ========================================================================== */
+
+/* ---------- Large Desktop (>1400px) ---------- */
+@media (min-width: 1400px) {
+  :root {
+    --container-padding-x: 2rem;
+  }
+}
+
+/* ---------- Desktop / Small Desktop (992px - 1199px) ---------- */
+@media (max-width: 1199.98px) {
+  :root {
+    --phone-width: 260px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}
+
+/* ---------- Tablet (768px - 991px) ---------- */
+@media (max-width: 991.98px) {
+  :root {
+    --navbar-height: 72px;
+    --navbar-height-scrolled: 62px;
+    --section-spacing-y: 4.5rem;
+    --card-padding: 1.5rem;
+    --phone-width: 240px;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: var(--navbar-height-scrolled);
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: var(--space-md) var(--container-padding-x);
+    border-bottom: var(--border-width) solid var(--color-border);
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: var(--transition-base);
+  }
+
+  .navbar-links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .navbar-link {
+    width: 100%;
+    padding-block: var(--space-sm);
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .navbar-link:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-link.is-active::after {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: inline-flex;
+  }
+
+  .navbar-cta .btn-rentify:not(.navbar-toggle-btn) {
+    display: none;
+  }
+
+  .cta-band-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-xl);
+  }
+}
+
+/* ---------- Mobile (up to 767px) ---------- */
+@media (max-width: 767.98px) {
+  :root {
+    --container-padding-x: 1.25rem;
+    --section-spacing-y: 3.5rem;
+    --card-padding: 1.5rem;
+    --button-height: 50px;
+    --phone-width: 220px;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .persona-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .stat-inline {
+    gap: var(--space-lg);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+
+  .btn-rentify {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .cta-download-col {
+    padding: var(--space-lg);
+  }
+}
+
+/* ---------- Small Mobile (up to 480px) ---------- */
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .back-to-top {
+    right: var(--space-md);
+    bottom: var(--space-md);
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ---------- No horizontal scroll safeguard ---------- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
