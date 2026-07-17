@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RENTIFY — Design Token System
+   RENTIFY â€” Design Token System
    Monochrome, editorial, app-consistent design language.
    Every value referenced in this stylesheet flows from :root.
    ========================================================================== */
@@ -451,7 +451,7 @@ button {
 }
 
 /* ==========================================================================
-   Badges / Pills — echoes mobile-app "verified" chips
+   Badges / Pills â€” echoes mobile-app "verified" chips
    ========================================================================== */
 
 .badge-rentify {
@@ -577,7 +577,7 @@ button {
 }
 
 /* ==========================================================================
-   Cards — mirror the rounded, bordered "app card" language
+   Cards â€” mirror the rounded, bordered "app card" language
    ========================================================================== */
 
 .card-rentify {
@@ -627,7 +627,7 @@ button {
 }
 
 /* ==========================================================================
-   Phone Mockup — the signature ecosystem element
+   Phone Mockup â€” the signature ecosystem element
    ========================================================================== */
 
 .phone-mockup {
@@ -977,7 +977,7 @@ textarea.form-control-rentify {
 
 .cta-band {
   border-radius: var(--radius-xl);
-  padding: var(--space-3xl) var(--space-xl);
+  padding: var(--space-2xl) var(--space-xl);
   background-color: var(--color-black);
   color: var(--color-white);
   text-align: center;
