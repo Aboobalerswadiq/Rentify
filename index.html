@@ -338,7 +338,7 @@
     <!-- ============================================================
          SECTION 7 — HOW RENTIFY WORKS
     ============================================================= -->
-    <section class="section section-alt" id="how-it-works">
+    <!-- <section class="section section-alt" id="how-it-works">
       <div class="container-rentify">
         <div class="section-header is-centered">
           <span class="text-eyebrow">How It Works</span>
@@ -411,6 +411,121 @@
                   <p class="text-body mb-0">Use analytics to optimize pricing and inventory.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section how-it-works-section" id="how-it-works">
+      <div class="container-rentify">
+        <div class="section-header is-centered" data-animate>
+          <span class="text-eyebrow">How It Works</span>
+          <h2 class="text-h2">One seamless journey for customers and rental businesses</h2>
+          <p class="text-body-lg workflow-subtext mt-3 mx-auto">See how Sareeq connects customers with trusted rental
+            businesses through one simple rental workflow.</p>
+        </div>
+
+        <div class="workflow-canvas" id="workflowCanvas">
+          <svg class="workflow-svg" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true"
+            focusable="false">
+            <!-- intra-branch connectors -->
+            <path class="workflow-line" d="M160,148 L160,196"></path>
+            <path class="workflow-line" d="M840,148 L840,196"></path>
+            <!-- branch to marketplace -->
+            <path class="workflow-line" d="M160,300 C160,382 300,382 402,272"></path>
+            <path class="workflow-line" d="M840,300 C840,382 700,382 598,272"></path>
+            <!-- marketplace to shared spine -->
+            <path class="workflow-line" d="M500,332 L500,420"></path>
+            <path class="workflow-line" d="M100,420 L900,420"></path>
+            <!-- spine to chain nodes -->
+            <path class="workflow-line" d="M100,420 L100,472"></path>
+            <path class="workflow-line" d="M320,420 L320,472"></path>
+            <path class="workflow-line" d="M500,420 L500,472"></path>
+            <path class="workflow-line" d="M680,420 L680,472"></path>
+            <path class="workflow-line" d="M900,420 L900,472"></path>
+
+            <circle class="workflow-dot" cx="402" cy="272" r="6"></circle>
+            <circle class="workflow-dot" cx="598" cy="272" r="6"></circle>
+            <circle class="workflow-dot" cx="500" cy="420" r="6"></circle>
+            <circle class="workflow-dot" cx="100" cy="420" r="5"></circle>
+            <circle class="workflow-dot" cx="320" cy="420" r="5"></circle>
+            <circle class="workflow-dot" cx="680" cy="420" r="5"></circle>
+            <circle class="workflow-dot" cx="900" cy="420" r="5"></circle>
+          </svg>
+
+          <!-- Customer Branch -->
+          <div class="workflow-node wf-node--customer-1" data-animate data-delay="500">
+            <span class="workflow-node-label"><i class="bi bi-person"></i> Customer</span>
+            <div class="workflow-card workflow-card-customer">
+              <div class="workflow-card-icon"><i class="bi bi-search"></i></div>
+              <p class="text-h4 workflow-card-title">Browse Equipment</p>
+              <p class="text-caption mb-0">Search verified listings nearby</p>
+            </div>
+          </div>
+          <div class="workflow-node wf-node--customer-2" data-animate data-delay="600">
+            <div class="workflow-card workflow-card-customer">
+              <div class="workflow-card-icon"><i class="bi bi-calendar-check"></i></div>
+              <p class="text-h4 workflow-card-title">Send Booking Request</p>
+              <p class="text-caption mb-0">Pick dates and request to book</p>
+            </div>
+          </div>
+
+          <!-- Marketplace Hub -->
+          <div class="workflow-node wf-node--hub" data-animate data-delay="250">
+            <div class="workflow-card workflow-card-hub">
+              <div class="workflow-card-icon workflow-card-icon-hub"><i class="bi bi-diagram-3"></i></div>
+              <p class="text-h3 workflow-card-title">Sareeq Marketplace</p>
+              <p class="text-body mb-0">Every booking, message and payment flows through one connected system.</p>
+            </div>
+          </div>
+
+          <!-- Vendor Branch -->
+          <div class="workflow-node wf-node--vendor-1" data-animate data-delay="500">
+            <span class="workflow-node-label"><i class="bi bi-person-workspace"></i> Vendor</span>
+            <div class="workflow-card workflow-card-vendor">
+              <div class="workflow-card-icon"><i class="bi bi-building"></i></div>
+              <p class="text-h4 workflow-card-title">Create Vendor Account</p>
+              <p class="text-caption mb-0">Register and get verified</p>
+            </div>
+          </div>
+          <div class="workflow-node wf-node--vendor-2" data-animate data-delay="600">
+            <div class="workflow-card workflow-card-vendor">
+              <div class="workflow-card-icon"><i class="bi bi-box-seam"></i></div>
+              <p class="text-h4 workflow-card-title">Add Equipment</p>
+              <p class="text-caption mb-0">List inventory and pricing</p>
+            </div>
+          </div>
+
+          <!-- Shared Chain -->
+          <div class="workflow-node wf-chain-1" data-animate data-delay="750">
+            <div class="workflow-card workflow-card-chain">
+              <i class="bi bi-check-circle"></i>
+              <p class="text-caption mb-0">Vendor Accepts</p>
+            </div>
+          </div>
+          <div class="workflow-node wf-chain-2" data-animate data-delay="800">
+            <div class="workflow-card workflow-card-chain">
+              <i class="bi bi-truck"></i>
+              <p class="text-caption mb-0">Pickup / Delivery</p>
+            </div>
+          </div>
+          <div class="workflow-node wf-chain-3" data-animate data-delay="850">
+            <div class="workflow-card workflow-card-chain">
+              <i class="bi bi-box"></i>
+              <p class="text-caption mb-0">Rental Period</p>
+            </div>
+          </div>
+          <div class="workflow-node wf-chain-4" data-animate data-delay="900">
+            <div class="workflow-card workflow-card-chain">
+              <i class="bi bi-arrow-repeat"></i>
+              <p class="text-caption mb-0">Return Equipment</p>
+            </div>
+          </div>
+          <div class="workflow-node wf-chain-5" data-animate data-delay="950">
+            <div class="workflow-card workflow-card-chain workflow-card-chain-final">
+              <i class="bi bi-check2-all"></i>
+              <p class="text-caption mb-0">Booking Complete</p>
             </div>
           </div>
         </div>
@@ -591,7 +706,7 @@
       <div class="container-rentify">
         <div class="cta-band" data-animate>
           <!-- <span class="text-eyebrow" style="color: var(--color-gray-400);">Get Started</span> -->
-          <h2 class="text-h2 mt-3">Begin Your Sareeq Journey</h2>
+          <h2 class="text-h2 mt-0">Begin Your Sareeq Journey</h2>
           <p class="text-body-lg mt-3 mx-auto" style="max-width: 520px; color: var(--color-gray-300);">
             Download the Customer app to rent equipment, or the Vendor app to manage and grow your rental business.
           </p>
@@ -600,7 +715,8 @@
             <div class="cta-download-col text-center">
               <i class="bi bi-person fs-2 mb-2"></i>
               <h4 class="text-h4">Customer App</h4>
-              <p class="text-body mb-4" style="color: var(--color-gray-300);">Find and book equipment near you.</p>
+              <p class="text-body mb-4" style="color: var(--color-gray-400)!important;">Find and book equipment near
+                you.</p>
               <div class="d-flex flex-wrap justify-content-center gap-3">
                 <a href="#" class="store-btn" aria-label="Download Customer App on Google Play">
                   <i class="bi bi-google-play"></i>
@@ -617,7 +733,8 @@
             <div class="cta-download-col text-center">
               <i class="bi bi-shop fs-2 mb-2"></i>
               <h4 class="text-h4">Vendor App</h4>
-              <p class="text-body mb-4" style="color: var(--color-gray-300);">List equipment and manage bookings.</p>
+              <p class="text-body mb-4" style="color: var(--color-gray-400)!important;">List equipment and manage
+                bookings.</p>
               <div class="d-flex flex-wrap justify-content-center gap-3">
                 <a href="#" class="store-btn" aria-label="Download Vendor App on Google Play">
                   <i class="bi bi-google-play"></i>
@@ -628,6 +745,11 @@
                   <i class="bi bi-apple"></i>
                   <span><span class="store-btn-text-sm">Download on the</span><span class="store-btn-text-lg">App
                       Store</span></span>
+                </a>
+                <a href="#" class="store-btn" aria-label="Download Vendor App on the App Store">
+                  <i class="bi bi-globe"></i>
+                  <span><span class="store-btn-text-sm">Sign Up on the</span><span class="store-btn-text-lg">Web
+                      App</span></span>
                 </a>
               </div>
             </div>

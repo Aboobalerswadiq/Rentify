@@ -150,7 +150,135 @@
 }
 
 /* ---------- No horizontal scroll safeguard ---------- */
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+
+
+/* ---------- Responsive: Tablet ---------- */
+
+@media (max-width: 1199.98px) {
+
+  .wf-node--customer-1,
+  .wf-node--customer-2 {
+    width: 26%;
+  }
+
+  .wf-node--vendor-1,
+  .wf-node--vendor-2 {
+    width: 26%;
+    left: 74%;
+  }
+
+  .wf-node--hub {
+    width: 30%;
+    left: 35%;
+  }
+
+  .workflow-card {
+    padding: var(--space-md);
+  }
+
+  .workflow-card-hub {
+    padding: var(--space-lg);
+  }
+}
+
+/* ---------- Responsive: Mobile / Tablet vertical journey ---------- */
+
+@media (max-width: 991.98px) {
+  .workflow-canvas {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+
+  .workflow-svg {
+    display: none;
+  }
+
+  .workflow-node {
+    position: static;
+    width: 100% !important;
+    left: auto;
+    top: auto;
+    justify-content: flex-start !important;
+  }
+
+  .wf-node--vendor-1 .workflow-node-label,
+  .wf-node--vendor-2 .workflow-node-label {
+    align-self: flex-start;
+  }
+
+  .wf-node--customer-1 {
+    order: 1;
+  }
+
+  .wf-node--customer-2 {
+    order: 2;
+  }
+
+  .wf-node--hub {
+    order: 3;
+  }
+
+  .wf-node--vendor-1 {
+    order: 4;
+  }
+
+  .wf-node--vendor-2 {
+    order: 5;
+  }
+
+  .wf-chain-1 {
+    order: 6;
+  }
+
+  .wf-chain-2 {
+    order: 7;
+  }
+
+  .wf-chain-3 {
+    order: 8;
+  }
+
+  .wf-chain-4 {
+    order: 9;
+  }
+
+  .wf-chain-5 {
+    order: 10;
+  }
+
+  .workflow-node:not(.wf-node--hub)::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: var(--space-lg);
+    background-color: var(--workflow-line-color);
+    margin: 0 0 var(--space-sm) var(--space-lg);
+  }
+
+  .wf-node--customer-1::before {
+    display: none;
+  }
+
+  .wf-node--hub::before {
+    inset: -10%;
+  }
+
+  .workflow-card-hub {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .workflow-node:not(.wf-node--hub)::before {
+    margin-left: var(--space-sm);
+  }
 }

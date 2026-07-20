@@ -105,4 +105,49 @@ document.addEventListener('DOMContentLoaded', function () {
     el.textContent = new Date().getFullYear();
   });
 
+  var canvas = document.getElementById('workflowCanvas');
+  if (!canvas) return;
+
+  var svg = canvas.querySelector('.workflow-svg');
+  if (!svg) return;
+
+  var lines = Array.prototype.slice.call(svg.querySelectorAll('.workflow-line'));
+  var dots = Array.prototype.slice.call(svg.querySelectorAll('.workflow-dot'));
+
+  lines.forEach(function (path) {
+    var length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+  });
+
+  function reveal() {
+    lines.forEach(function (path, index) {
+      path.style.transitionDelay = (index * 55) + 'ms';
+      path.style.strokeDashoffset = '0';
+    });
+    window.setTimeout(function () {
+      dots.forEach(function (dot, index) {
+        dot.style.transitionDelay = (index * 45) + 'ms';
+        dot.classList.add('is-visible');
+      });
+    }, 260);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    reveal();
+    return;
+  }
+
+  var workflowObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        reveal();
+        workflowObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+
+  workflowObserver.observe(canvas);
+
+
 });

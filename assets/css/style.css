@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RENTIFY â€” Design Token System
+   RENTIFY ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Design Token System
    Monochrome, editorial, app-consistent design language.
    Every value referenced in this stylesheet flows from :root.
    ========================================================================== */
@@ -170,6 +170,12 @@
   /* ---------- Phone Mockup ---------- */
   --phone-width: 300px;
   --phone-border-width: 10px;
+
+  --color-glow-soft: rgba(10, 10, 10, 0.07);
+  --workflow-ratio: 1000 / 620;
+  --workflow-line-color: var(--color-border-strong);
+  --workflow-line-color-active: var(--color-gray-600);
+  --workflow-dot-size: 10px;
 }
 
 /* ==========================================================================
@@ -207,6 +213,27 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out), transform var(--duration-slow) var(--ease-out);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
 
 a {
   text-decoration: none;
@@ -451,7 +478,7 @@ button {
 }
 
 /* ==========================================================================
-   Badges / Pills â€” echoes mobile-app "verified" chips
+   Badges / Pills ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â echoes mobile-app "verified" chips
    ========================================================================== */
 
 .badge-rentify {
@@ -577,7 +604,7 @@ button {
 }
 
 /* ==========================================================================
-   Cards â€” mirror the rounded, bordered "app card" language
+   Cards ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â mirror the rounded, bordered "app card" language
    ========================================================================== */
 
 .card-rentify {
@@ -626,8 +653,13 @@ button {
   color: var(--color-black);
 }
 
+.card-rentify-inverse .text-body {
+  color: var(--color-gray-400) !important;
+}
+
+
 /* ==========================================================================
-   Phone Mockup â€” the signature ecosystem element
+   Phone Mockup ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the signature ecosystem element
    ========================================================================== */
 
 .phone-mockup {
@@ -976,13 +1008,20 @@ textarea.form-control-rentify {
    ========================================================================== */
 
 .cta-band {
+  background-image: url(../images/heavy_equip.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: var(--radius-xl);
-  padding: var(--space-2xl) var(--space-xl);
-  background-color: var(--color-black);
+  padding: var(--space-xl) var(--space-xl);
+  /* background-color: var(--color-black); */
   color: var(--color-white);
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.cta-band::after {
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .cta-band-grid {
@@ -995,6 +1034,8 @@ textarea.form-control-rentify {
 
 .cta-download-col {
   border: var(--border-width) solid var(--color-border-inverse);
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(04px);
   border-radius: var(--radius-md);
   padding: var(--space-xl);
 }
@@ -1211,4 +1252,281 @@ textarea.form-control-rentify {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+.how-it-works-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.how-it-works-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--color-gray-150) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-gray-150) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, var(--color-black) 25%, var(--color-black) 75%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, var(--color-black) 25%, var(--color-black) 75%, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.how-it-works-section>.container-rentify {
+  position: relative;
+  z-index: 1;
+}
+
+.workflow-subtext {
+  max-width: 620px;
+}
+
+/* ---------- Canvas (desktop diagram) ---------- */
+
+.workflow-canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--workflow-ratio);
+  margin-top: var(--space-2xl);
+}
+
+.workflow-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.workflow-line {
+  fill: none;
+  stroke: var(--workflow-line-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: stroke-dashoffset var(--duration-slow) var(--ease-out), stroke var(--duration-base) var(--ease-standard);
+}
+
+.workflow-canvas:hover .workflow-line {
+  stroke: var(--workflow-line-color-active);
+}
+
+.workflow-dot {
+  fill: var(--color-black);
+  opacity: 0;
+  transform-origin: center;
+  transform: scale(0.4);
+  transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out);
+}
+
+.workflow-dot.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Nodes ---------- */
+
+.workflow-node {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow-node-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  font-size: var(--font-size-micro);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-sm);
+}
+
+/* Customer branch */
+.wf-node--customer-1 {
+  left: 0%;
+  top: 4.5%;
+  width: 24%;
+}
+
+.wf-node--customer-2 {
+  left: 0%;
+  top: 31%;
+  width: 24%;
+}
+
+/* Vendor branch */
+.wf-node--vendor-1 {
+  left: 76%;
+  top: 4.5%;
+  width: 24%;
+}
+
+.wf-node--vendor-2 {
+  left: 76%;
+  top: 31%;
+  width: 24%;
+}
+
+.wf-node--vendor-1 .workflow-node-label,
+.wf-node--vendor-2 .workflow-node-label {
+  align-self: flex-end;
+}
+
+.wf-node--customer-1,
+.wf-node--vendor-1 {
+  justify-content: flex-end;
+}
+
+/* Marketplace hub */
+.wf-node--hub {
+  left: 36%;
+  top: 21%;
+  width: 28%;
+  z-index: 2;
+}
+
+/* Shared chain */
+.wf-chain-1 {
+  left: 1.5%;
+  top: 76%;
+  width: 16.5%;
+}
+
+.wf-chain-2 {
+  left: 21.5%;
+  top: 76%;
+  width: 16.5%;
+}
+
+.wf-chain-3 {
+  left: 41.5%;
+  top: 76%;
+  width: 16.5%;
+}
+
+.wf-chain-4 {
+  left: 61.5%;
+  top: 76%;
+  width: 16.5%;
+}
+
+.wf-chain-5 {
+  left: 81.5%;
+  top: 76%;
+  width: 16.5%;
+}
+
+/* ---------- Cards ---------- */
+
+.workflow-card {
+  border-radius: var(--radius-card);
+  padding: var(--space-md);
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.workflow-card-icon {
+  width: var(--icon-size-xl);
+  height: var(--icon-size-xl);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: var(--space-sm);
+}
+
+.workflow-card-title {
+  margin: 0 0 var(--space-3xs);
+  font-size: 1.05rem;
+}
+
+.workflow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.workflow-card:hover .workflow-card-icon i {
+  transform: scale(1.12);
+  display: inline-block;
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.workflow-card-customer {
+  background-color: var(--color-surface);
+  border: var(--border-width-thick) solid var(--color-border-strong);
+}
+
+.workflow-card-customer .workflow-card-icon {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.workflow-card-vendor {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: var(--border-width-thick) solid var(--color-black);
+}
+
+.workflow-card-vendor .text-caption {
+  color: var(--color-gray-400);
+}
+
+.workflow-card-vendor .workflow-card-icon {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.workflow-card-hub {
+  height: 100%;
+  background-color: var(--color-white);
+  border: 3px solid var(--color-black);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.workflow-card-icon-hub {
+  width: var(--icon-size-xl);
+  height: var(--icon-size-xl);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  border-radius: var(--radius-md);
+}
+
+.wf-node--hub::before {
+  content: '';
+  position: absolute;
+  inset: -18%;
+  background: radial-gradient(circle, var(--color-glow-soft), transparent 70%);
+  z-index: -1;
+}
+
+.workflow-card-chain {
+  background-color: var(--color-bg-alt);
+  border: var(--border-width) solid var(--color-border);
+  padding: var(--space-md) var(--space-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.workflow-card-chain i {
+  font-size: var(--icon-size-md);
+}
+
+.workflow-card-chain-final {
+  border-color: var(--color-black);
+  border-width: var(--border-width-thick);
 }
