@@ -1150,8 +1150,8 @@ textarea.form-control-rentify {
 }
 
 .page-hero {
-  padding-top: calc(var(--navbar-height) + var(--space-3xl));
-  padding-bottom: var(--space-3xl);
+  padding-top: calc(var(--navbar-height) + var(--space-2xl));
+  padding-bottom: var(--space-2xl);
 }
 
 .stat-inline {
