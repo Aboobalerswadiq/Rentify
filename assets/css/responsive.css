@@ -157,6 +157,19 @@
   .navbar-inner {
     max-width: 95%;
   }
+
+  .text-body-lg {
+    font-size: 1rem;
+  }
+
+  .hero-bg-grid {
+    /* padding-top: calc(var(--navbar-height)) !important; */
+    padding-top: 8rem !important;
+  }
+
+  .accordion-rentify .accordion-button {
+    font-size: 1.125rem;
+  }
 }
 
 /* ---------- Small Mobile (up to 480px) ---------- */
