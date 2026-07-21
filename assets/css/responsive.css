@@ -137,6 +137,26 @@
   .cta-download-col {
     padding: var(--space-lg);
   }
+
+  .how-it-works-section {
+    display: none;
+  }
+
+  .cta-band {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .text-display {
+    font-size: 2.25rem;
+  }
+
+  .hero-img {
+    order: -1;
+  }
+
+  .navbar-inner {
+    max-width: 95%;
+  }
 }
 
 /* ---------- Small Mobile (up to 480px) ---------- */
