@@ -252,6 +252,10 @@ ul {
   margin: 0;
 }
 
+i {
+  font-size: 1rem;
+}
+
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 3px;
@@ -328,6 +332,7 @@ button {
   letter-spacing: var(--letter-spacing-heading);
   font-weight: var(--font-weight-semibold);
   margin: 0;
+  text
 }
 
 .text-h3 {
@@ -607,6 +612,11 @@ button {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+}
+
+.navbar-cta i {
+  font-size: 1rem;
+  margin-left: 0.125rem;
 }
 
 .navbar-toggle {

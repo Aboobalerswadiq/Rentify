@@ -52,26 +52,27 @@
         <img src="assets/images/logo_black.svg" alt="logo_black">
         Sareeq
       </a>
+      <div class="d-flex gap-4">
+        <nav class="navbar-links" id="navbarLinks" aria-label="Primary">
+          <a href="index.html" class="navbar-link is-active">Home</a>
+          <a href="pages/features.html" class="navbar-link">Features</a>
+          <a href="pages/about.html" class="navbar-link">About</a>
+          <a href="pages/faq.html" class="navbar-link">FAQ</a>
+          <a href="pages/support.html" class="navbar-link">Contact</a>
+        </nav>
 
-      <nav class="navbar-links" id="navbarLinks" aria-label="Primary">
-        <a href="index.html" class="navbar-link is-active">Home</a>
-        <a href="pages/features.html" class="navbar-link">Features</a>
-        <a href="pages/about.html" class="navbar-link">About</a>
-        <a href="pages/faq.html" class="navbar-link">FAQ</a>
-        <a href="pages/support.html" class="navbar-link">Contact</a>
-      </nav>
-
-      <div class="navbar-cta">
-        <a href="#download" class="btn-rentify btn-primary-rentify btn-rentify-sm d-none d-lg-inline-flex">
-          Download App
-        </a>
-        <a href="#download" class="btn-rentify btn-secondary-rentify btn-rentify-sm d-none d-lg-inline-flex">
-          Partner with us
-        </a>
-        <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu" aria-expanded="false"
-          aria-controls="navbarLinks">
-          <i class="bi bi-list"></i>
-        </button>
+        <div class="navbar-cta">
+          <a href="#download" class="btn-rentify btn-secondary-rentify btn-rentify-sm d-none d-lg-inline-flex">
+            Partner with us <i class="bi bi-arrow-up-right-circle "></i>
+          </a>
+          <a href="#download" class="btn-rentify btn-primary-rentify btn-rentify-sm d-none d-lg-inline-flex">
+            Download App
+          </a>
+          <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu" aria-expanded="false"
+            aria-controls="navbarLinks">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -85,15 +86,15 @@
       <div class="container-rentify">
         <div class="row align-items-center g-5">
           <div class="col-lg-5" data-animate>
-            <span class="text-eyebrow">YOUR RENTAL PARTNER</span>
-            <h1 class="text-display mt-3">Where Equipment Meets Opportunity.</h1>
+            <!-- <span class="text-eyebrow">YOUR RENTAL PARTNER</span> -->
+            <h1 class="text-display mt-3">Making equipment more accessible.</h1>
             <p class="text-body-lg mt-4" style="max-width: 480px;">
-              Discover and rent equipment from trusted local businesses, or grow your rental business by reaching more
-              customers with Rentify.
+              Access a wide range of equipment through a seamless rental experience designed around convenience,
+              flexibility, and value.
             </p>
             <div class="d-flex flex-wrap gap-3 mt-5 hero-actions">
               <a href="#download" class="btn-rentify btn-primary-rentify">
-                Get the App
+                <i class="bi bi-phone"></i> Get the App
               </a>
             </div>
 
@@ -139,102 +140,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ============================================================
-         SECTION 3 — CUSTOMER VS VENDOR
-    ============================================================= -->
-    <!-- <section class="section section-alt" id="personas">
-      <div class="container-rentify">
-        <div class="section-header is-centered">
-          <span class="text-eyebrow">Two Apps, One Marketplace</span>
-          <h2 class="text-h2">Built for renters. Built for businesses.</h2>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-6" data-animate>
-            <div class="persona-card persona-card-customer">
-              <span class="badge-rentify"><i class="bi bi-person"></i> Customer App</span>
-              <h3 class="text-h3 mt-4">Rent what you need, when you need it</h3>
-              <p class="text-body mt-3">
-                Search nearby equipment, compare verified vendors, and book instantly. No calls, no paperwork — just
-                gear, ready when you are.
-              </p>
-              <ul class="persona-card-list">
-                <li><i class="bi bi-check2"></i> Browse thousands of listings by category or location</li>
-                <li><i class="bi bi-check2"></i> Message vendors and confirm availability in real time</li>
-                <li><i class="bi bi-check2"></i> Track bookings, pickups and returns in one place</li>
-              </ul>
-              <a href="#download" class="btn-rentify btn-primary-rentify mt-4">Get the Customer App</a>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-animate data-delay="120">
-            <div class="persona-card persona-card-vendor">
-              <span class="badge-rentify"
-                style="background-color: rgba(255,255,255,0.08); color: #fff; border-color: var(--color-border-inverse);"><i
-                  class="bi bi-shop"></i> Vendor App</span>
-              <h3 class="text-h3 mt-4">Turn your equipment into revenue</h3>
-              <p class="text-body mt-3" style="color: var(--color-gray-300);">
-                Register your business, list your inventory and manage every booking from a single dashboard built for
-                rental operators.
-              </p>
-              <ul class="persona-card-list">
-                <li><i class="bi bi-check2"></i> List unlimited equipment with pricing and availability</li>
-                <li><i class="bi bi-check2"></i> Accept, schedule and track bookings with a live calendar</li>
-                <li><i class="bi bi-check2"></i> Get performance analytics to grow your business</li>
-              </ul>
-              <a href="#download" class="btn-rentify btn-secondary-rentify mt-4">Get the Vendor App</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- ============================================================
-         SECTION 4 — WHY RENTIFY
-    ============================================================= -->
-    <!-- <section class="section" id="why-rentify">
-      <div class="container-rentify">
-        <div class="section-header">
-          <span class="text-eyebrow">Why Rentify</span>
-          <h2 class="text-h2">Rental, without the friction</h2>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3" data-animate>
-            <div class="card-rentify h-100">
-              <div class="card-icon-tile"><i class="bi bi-patch-check"></i></div>
-              <h4 class="text-h4">Verified Vendors</h4>
-              <p class="text-body mt-2 mb-0">Every business is identity-checked before they can list equipment on
-                Rentify.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3" data-animate data-delay="80">
-            <div class="card-rentify h-100">
-              <div class="card-icon-tile"><i class="bi bi-lightning-charge"></i></div>
-              <h4 class="text-h4">Easy Booking</h4>
-              <p class="text-body mt-2 mb-0">Reserve equipment in three taps, with instant confirmation from the vendor.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3" data-animate data-delay="160">
-            <div class="card-rentify h-100">
-              <div class="card-icon-tile"><i class="bi bi-tags"></i></div>
-              <h4 class="text-h4">Transparent Pricing</h4>
-              <p class="text-body mt-2 mb-0">See daily rates, deposits and fees upfront — no surprises at pickup.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3" data-animate data-delay="240">
-            <div class="card-rentify h-100">
-              <div class="card-icon-tile"><i class="bi bi-shield-lock"></i></div>
-              <h4 class="text-h4">Secure Payments</h4>
-              <p class="text-body mt-2 mb-0">Payments are encrypted and held safely until your rental is confirmed.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <!-- ============================================================
          SECTION 5 — CUSTOMER APP SHOWCASE
     ============================================================= -->
@@ -243,7 +148,7 @@
         <div class="row align-items-center g-5">
           <div class="col-lg-6 order-lg-2" data-animate>
             <span class="text-eyebrow">For Customer</span>
-            <h2 class="text-h2 mt-3">Rent Equipment with Confidence</h2>
+            <h2 class="text-h2 mt-3 w-75">Hire equipment from a trusted marketplace</h2>
             <ul class="persona-card-list mt-4">
               <li>
                 <i class="bi bi-patch-check"></i>
@@ -252,7 +157,7 @@
 
               <li>
                 <i class="bi bi-boxes"></i>
-                Rent multiple equipment in a single order
+                Access a wide range of equipment through a single marketplace
               </li>
 
               <li>
@@ -265,8 +170,6 @@
                 Track bookings with complete rental details
               </li>
             </ul>
-            <a href="pages/features.html#customer-features" class="btn-rentify btn-secondary-rentify mt-4">Explore more
-              features<i class="bi bi-arrow-right ms-2"></i></a>
           </div>
           <div class="col-lg-6 order-lg-1 d-flex justify-content-center" data-animate data-delay="120">
             <!-- <div class="phone-mockup">
@@ -292,7 +195,7 @@
         <div class="row align-items-center g-5">
           <div class="col-lg-6" data-animate data-delay="120">
             <span class="text-eyebrow">For Vendor</span>
-            <h2 class="text-h2 mt-3">Manage Your Rental <br> Business with Ease</h2>
+            <h2 class="text-h2 mt-3">Manage your rental <br> business with ease</h2>
             <ul class="persona-card-list mt-4">
               <li>
                 <i class="bi bi-box-seam"></i>
@@ -316,8 +219,10 @@
               <!-- <li><i class="bi bi-bar-chart"></i> Analytics on revenue, demand and top items</li>
               <li><i class="bi bi-award"></i> Subscription plans that scale with your business</li> -->
             </ul>
-            <a href="pages/features.html#vendor-features" class="btn-rentify btn-secondary-rentify mt-4">Explore more
-              features<i class="bi bi-arrow-right ms-2"></i></a>
+            <a href="#download"
+              class="btn-rentify btn-secondary-rentify btn-rentify-sm d-none d-lg-inline-flex mt-4 mb-5">
+              Partner with us <i class="bi bi-arrow-up-right-circle "></i>
+            </a>
           </div>
           <div class="col-lg-6" data-animate>
             <!-- <div class="phone-mockup d-flex mx-auto mx-lg-0">
@@ -334,371 +239,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ============================================================
-         SECTION 7 — HOW RENTIFY WORKS
-    ============================================================= -->
-    <!-- <section class="section section-alt" id="how-it-works">
-      <div class="container-rentify">
-        <div class="section-header is-centered">
-          <span class="text-eyebrow">How It Works</span>
-          <h2 class="text-h2">Two journeys, one seamless platform</h2>
-        </div>
-
-        <div class="row g-5">
-          <div class="col-lg-6" data-animate>
-            <h4 class="text-h4 mb-3">Customer Journey</h4>
-            <div class="timeline-rentify">
-              <div class="timeline-step">
-                <span class="timeline-step-index">01</span>
-                <div>
-                  <p class="text-h4 mb-1" style="font-size: 1.05rem;">Search</p>
-                  <p class="text-body mb-0">Find equipment near you by category, date or keyword.</p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <span class="timeline-step-index">02</span>
-                <div>
-                  <p class="text-h4 mb-1" style="font-size: 1.05rem;">Book</p>
-                  <p class="text-body mb-0">Select your rental dates and confirm with the vendor.</p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <span class="timeline-step-index">03</span>
-                <div>
-                  <p class="text-h4 mb-1" style="font-size: 1.05rem;">Pick Up</p>
-                  <p class="text-body mb-0">Collect equipment at the agreed time and location.</p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <span class="timeline-step-index">04</span>
-                <div>
-                  <p class="text-h4 mb-1" style="font-size: 1.05rem;">Return &amp; Review</p>
-                  <p class="text-body mb-0">Return the item and leave a rating for the vendor.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-animate data-delay="120">
-            <h4 class="text-h4 mb-3">Vendor Journey</h4>
-            <div class="timeline-rentify">
-              <div class="timeline-step">
-                <span class="timeline-step-index">01</span>
-                <div>
-                  <p class="text-h4 mb-1" style="font-size: 1.05rem;">Register</p>
-                  <p class="text-body mb-0">Create your business profile and get verified.</p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <span class="timeline-step-index">02</span>
-                <div>
-                  <p class="text-h4 mb-1" style="font-size: 1.05rem;">List</p>
-                  <p class="text-body mb-0">Add equipment with photos, pricing and availability.</p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <span class="timeline-step-index">03</span>
-                <div>
-                  <p class="text-h4 mb-1" style="font-size: 1.05rem;">Manage</p>
-                  <p class="text-body mb-0">Accept bookings and track your calendar in real time.</p>
-                </div>
-              </div>
-              <div class="timeline-step">
-                <span class="timeline-step-index">04</span>
-                <div>
-                  <p class="text-h4 mb-1" style="font-size: 1.05rem;">Grow</p>
-                  <p class="text-body mb-0">Use analytics to optimize pricing and inventory.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section class="section how-it-works-section" id="how-it-works">
-      <div class="container-rentify">
-        <div class="section-header is-centered" data-animate>
-          <span class="text-eyebrow">How It Works</span>
-          <h2 class="text-h2">One seamless journey for customers and rental businesses</h2>
-          <p class="text-body-lg workflow-subtext mt-3 mx-auto">See how Sareeq connects customers with trusted rental
-            businesses through one simple rental workflow.</p>
-        </div>
-
-        <div class="workflow-canvas" id="workflowCanvas">
-          <svg class="workflow-svg" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true"
-            focusable="false">
-            <!-- intra-branch connectors -->
-            <path class="workflow-line" d="M160,148 L160,196"></path>
-            <path class="workflow-line" d="M840,148 L840,196"></path>
-            <!-- branch to marketplace -->
-            <path class="workflow-line" d="M160,300 C160,382 300,382 402,272"></path>
-            <path class="workflow-line" d="M840,300 C840,382 700,382 598,272"></path>
-            <!-- marketplace to shared spine -->
-            <path class="workflow-line" d="M500,332 L500,420"></path>
-            <path class="workflow-line" d="M100,420 L900,420"></path>
-            <!-- spine to chain nodes -->
-            <path class="workflow-line" d="M100,420 L100,472"></path>
-            <path class="workflow-line" d="M320,420 L320,472"></path>
-            <path class="workflow-line" d="M500,420 L500,472"></path>
-            <path class="workflow-line" d="M680,420 L680,472"></path>
-            <path class="workflow-line" d="M900,420 L900,472"></path>
-
-            <circle class="workflow-dot" cx="402" cy="272" r="6"></circle>
-            <circle class="workflow-dot" cx="598" cy="272" r="6"></circle>
-            <circle class="workflow-dot" cx="500" cy="420" r="6"></circle>
-            <circle class="workflow-dot" cx="100" cy="420" r="5"></circle>
-            <circle class="workflow-dot" cx="320" cy="420" r="5"></circle>
-            <circle class="workflow-dot" cx="680" cy="420" r="5"></circle>
-            <circle class="workflow-dot" cx="900" cy="420" r="5"></circle>
-          </svg>
-
-          <!-- Customer Branch -->
-          <div class="workflow-node wf-node--customer-1" data-animate data-delay="500">
-            <span class="workflow-node-label"><i class="bi bi-person"></i> Customer</span>
-            <div class="workflow-card workflow-card-customer">
-              <div class="workflow-card-icon"><i class="bi bi-search"></i></div>
-              <p class="text-h4 workflow-card-title">Browse Equipment</p>
-              <p class="text-caption mb-0">Search verified listings nearby</p>
-            </div>
-          </div>
-          <div class="workflow-node wf-node--customer-2" data-animate data-delay="600">
-            <div class="workflow-card workflow-card-customer">
-              <div class="workflow-card-icon"><i class="bi bi-calendar-check"></i></div>
-              <p class="text-h4 workflow-card-title">Send Booking Request</p>
-              <p class="text-caption mb-0">Pick dates and request to book</p>
-            </div>
-          </div>
-
-          <!-- Marketplace Hub -->
-          <div class="workflow-node wf-node--hub" data-animate data-delay="250">
-            <div class="workflow-card workflow-card-hub">
-              <div class="workflow-card-icon workflow-card-icon-hub"><i class="bi bi-diagram-3"></i></div>
-              <p class="text-h3 workflow-card-title">Sareeq Marketplace</p>
-              <p class="text-body mb-0">Every booking, Equipment creation and payment flows through one connected
-                system.</p>
-            </div>
-          </div>
-
-          <!-- Vendor Branch -->
-          <div class="workflow-node wf-node--vendor-1" data-animate data-delay="500">
-            <span class="workflow-node-label"><i class="bi bi-person-workspace"></i> Vendor</span>
-            <div class="workflow-card workflow-card-vendor">
-              <div class="workflow-card-icon"><i class="bi bi-box-seam"></i></div>
-              <p class="text-h4 workflow-card-title">Add Equipment</p>
-              <p class="text-caption mb-0">List inventory and pricing</p>
-            </div>
-          </div>
-          <div class="workflow-node wf-node--vendor-2" data-animate data-delay="600">
-            <div class="workflow-card workflow-card-vendor">
-              <div class="workflow-card-icon"><i class="bi bi-journal-check"></i></div>
-              <p class="text-h4 workflow-card-title">Aceept/Reject Bookings</p>
-              <p class="text-caption mb-0">Review incoming booking requests</p>
-            </div>
-          </div>
-
-          <!-- Shared Chain -->
-          <div class="workflow-node wf-chain-1" data-animate data-delay="750">
-            <div class="workflow-card workflow-card-chain">
-              <i class="bi bi-check-circle"></i>
-              <p class="text-caption mb-0">Vendor Accepts</p>
-            </div>
-          </div>
-          <div class="workflow-node wf-chain-2" data-animate data-delay="900">
-            <div class="workflow-card workflow-card-chain">
-              <i class="bi bi-credit-card"></i>
-              <p class="text-caption mb-0">Complete Payment</p>
-            </div>
-          </div>
-          <div class="workflow-node wf-chain-3" data-animate data-delay="800">
-            <div class="workflow-card workflow-card-chain">
-              <i class="bi bi-truck"></i>
-              <p class="text-caption mb-0">Delivery Equipment </p>
-            </div>
-          </div>
-          <div class="workflow-node wf-chain-4" data-animate data-delay="850">
-            <div class="workflow-card workflow-card-chain">
-              <i class="bi bi-box"></i>
-              <p class="text-caption mb-0">Rental Period</p>
-            </div>
-          </div>
-          <div class="workflow-node wf-chain-5" data-animate data-delay="950">
-            <div class="workflow-card workflow-card-chain workflow-card-chain-final">
-              <i class="bi bi-check2-all"></i>
-              <p class="text-caption mb-0">Booking Complete</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         SECTION 8 — EQUIPMENT CATEGORIES
-    ============================================================= -->
-    <!-- <section class="section" id="categories">
-      <div class="container-rentify">
-        <div class="section-header is-centered">
-          <span class="text-eyebrow">Browse by Category</span>
-          <h2 class="text-h2">Whatever the project, there's gear for it</h2>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-6 col-md-4 col-lg-2" data-animate>
-            <div class="category-tile">
-              <i class="bi bi-tools"></i>
-              <span class="text-body fw-medium">Power Tools</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2" data-animate data-delay="60">
-            <div class="category-tile">
-              <i class="bi bi-camera"></i>
-              <span class="text-body fw-medium">Cameras</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2" data-animate data-delay="120">
-            <div class="category-tile">
-              <i class="bi bi-cone-striped"></i>
-              <span class="text-body fw-medium">Construction</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2" data-animate data-delay="180">
-            <div class="category-tile">
-              <i class="bi bi-balloon"></i>
-              <span class="text-body fw-medium">Party &amp; Events</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2" data-animate data-delay="240">
-            <div class="category-tile">
-              <i class="bi bi-bicycle"></i>
-              <span class="text-body fw-medium">Outdoor &amp; Sports</span>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2" data-animate data-delay="300">
-            <div class="category-tile">
-              <i class="bi bi-soundwave"></i>
-              <span class="text-body fw-medium">Audio &amp; Lighting</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- ============================================================
-         SECTION 9 — APPLICATION SCREENSHOTS
-    ============================================================= -->
-    <!-- <section class="section section-alt" id="screenshots">
-      <div class="container-rentify">
-        <div class="section-header is-centered">
-          <span class="text-eyebrow">See It In Action</span>
-          <h2 class="text-h2">A closer look at the app</h2>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-6 col-lg-3" data-animate>
-            <div class="phone-mockup mx-auto" style="width: 100%; max-width: 240px;">
-              <div class="phone-mockup-notch"></div>
-              <div class="phone-mockup-screen">
-                <div class="app-screen-placeholder"><i class="bi bi-house-door"></i><span>Home</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3" data-animate data-delay="80">
-            <div class="phone-mockup mx-auto" style="width: 100%; max-width: 240px;">
-              <div class="phone-mockup-notch"></div>
-              <div class="phone-mockup-screen">
-                <div class="app-screen-placeholder"><i class="bi bi-sliders"></i><span>Listing Detail</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3" data-animate data-delay="160">
-            <div class="phone-mockup mx-auto" style="width: 100%; max-width: 240px;">
-              <div class="phone-mockup-notch"></div>
-              <div class="phone-mockup-screen">
-                <div class="app-screen-placeholder"><i class="bi bi-chat-square-text"></i><span>Messages</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3" data-animate data-delay="240">
-            <div class="phone-mockup mx-auto" style="width: 100%; max-width: 240px;">
-              <div class="phone-mockup-notch"></div>
-              <div class="phone-mockup-screen">
-                <div class="app-screen-placeholder"><i class="bi bi-person-circle"></i><span>Profile</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- ============================================================
-         SECTION 10 — FAQ
-    ============================================================= -->
-    <!-- <section class="section" id="faq">
-      <div class="container-rentify">
-        <div class="row">
-          <div class="col-lg-5" data-animate>
-            <span class="text-eyebrow">Frequently Asked</span>
-            <h2 class="text-h2 mt-3">Questions, answered</h2>
-            <p class="text-body mt-3">Can't find what you're looking for? Visit our full FAQ or reach out to support.
-            </p>
-            <a href="pages/faq.html" class="btn-rentify btn-secondary-rentify mt-3">View full FAQ</a>
-          </div>
-          <div class="col-lg-7" data-animate data-delay="100">
-            <div class="accordion accordion-rentify" id="homeFaqAccordion">
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq1">
-                    Is Rentify available in my city?
-                  </button>
-                </h3>
-                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
-                  <div class="accordion-body">Rentify is expanding to new cities every month. Download the app and enter
-                    your location to see available vendors near you.</div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq2">
-                    How are vendors verified?
-                  </button>
-                </h3>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
-                  <div class="accordion-body">Every vendor completes an identity and business verification process
-                    before their listings go live on Rentify.</div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq3">
-                    What happens if equipment is damaged?
-                  </button>
-                </h3>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
-                  <div class="accordion-body">Rentals are covered by a security deposit and vendor-defined policies,
-                    both shown clearly before you book.</div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#faq4">
-                    Is listing equipment free?
-                  </button>
-                </h3>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
-                  <div class="accordion-body">Vendors can list equipment on a free plan, with optional subscription
-                    tiers for advanced tools and analytics.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- ============================================================
          SECTION 11 — DOWNLOAD APPS
@@ -812,13 +352,7 @@
             Sareeq
           </a>
           <p class="mt-3" style="color: var(--color-gray-500); max-width: 260px;">The heavy equipment rental
-            marketplace connecting renters with verified local vendors.</p>
-          <div class="footer-social mt-4">
-            <a href="#" aria-label="Rentify on LinkedIn"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="Rentify on Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" aria-label="Rentify on X"><i class="bi bi-twitter-x"></i></a>
-            <!-- <a href="#" aria-label="Rentify on LinkedIn"><i class="bi bi-linkedin"></i></a> -->
-          </div>
+            Making equipment more accessible for everyone.</p>
         </div>
         <div>
           <p class="footer-col-title">Quick Links</p>
@@ -834,9 +368,15 @@
           <a href="pages/terms.html" class="footer-link">Terms &amp; Conditions</a>
         </div>
         <div>
-          <p class="footer-col-title">Get the App</p>
-          <a href="#download" class="footer-link">Customer App</a>
-          <a href="#download" class="footer-link">Vendor App</a>
+          <p class="footer-col-title">Choose Us</p>
+          <div class="footer-social mt-4">
+            <a href="#" aria-label="Rentify on LinkedIn"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Rentify on Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Rentify on X"><i class="bi bi-twitter-x"></i></a>
+            <!-- <a href="#" aria-label="Rentify on LinkedIn"><i class="bi bi-linkedin"></i></a> -->
+          </div>
+          <!-- <a href="#download" class="footer-link">Customer App</a>
+          <a href="#download" class="footer-link">Vendor App</a> -->
         </div>
       </div>
 
