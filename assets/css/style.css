@@ -280,6 +280,11 @@ button {
   padding-inline: var(--container-padding-x);
 }
 
+.container-full {
+  width: 100%;
+  max-width: 100%;
+}
+
 .section {
   padding-block: var(--section-spacing-y);
 }
@@ -450,6 +455,19 @@ button {
 .btn-secondary-rentify:hover {
   border-color: var(--color-black);
   transform: translateY(-2px);
+}
+
+.btn-tirtiary-rentify {
+  background-color: transparent;
+  color: var(--color-black);
+  border: none;
+}
+
+.btn-tirtiary-rentify::after {
+  content: "\F138";
+  font-family: "bootstrap-icons";
+  font-size: 1rem;
+  color: var(--color-black);
 }
 
 .section-inverse .btn-secondary-rentify {
@@ -1011,11 +1029,12 @@ textarea.form-control-rentify {
   background-image: url(../images/heavy_equip.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: var(--radius-xl);
-  padding: var(--space-xl) var(--space-xl);
+  background-position: 0rem -12rem;
+  /* border-radius: var(--radius-xl); */
+  padding: var(--space-2xl) 0;
   /* background-color: var(--color-black); */
   color: var(--color-white);
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
 }
@@ -1533,4 +1552,33 @@ textarea.form-control-rentify {
 .workflow-card-chain-final {
   border-color: var(--color-black);
   border-width: var(--border-width-thick);
+}
+
+.qr-box {
+  /* position: relative;
+    width: var(--phone-width); */
+  /* aspect-ratio: 300 / 610; */
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-phone);
+  border: 5px solid;
+  border-color: var(--color-black);
+  padding: 0.75rem;
+  box-shadow: var(--shadow-phone);
+}
+
+.qr {
+  width: 200px;
+}
+
+.qr-box img {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.scan-here {
+  border-bottom-left-radius: var(--radius-phone);
+  border-bottom-right-radius: var(--radius-phone);
+  background-color: #FFFFFF;
+  padding: 0.75rem;
 }
