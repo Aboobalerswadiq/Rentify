@@ -102,6 +102,10 @@
     margin-bottom: var(--space-xl);
   }
 
+  .container-rentify {
+    max-width: 95%;
+  }
+
   .persona-card {
     padding: var(--space-xl) var(--space-lg);
   }

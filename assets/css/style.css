@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RENTIFY ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Design Token System
+   RENTIFY ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Design Token System
    Monochrome, editorial, app-consistent design language.
    Every value referenced in this stylesheet flows from :root.
    ========================================================================== */
@@ -478,7 +478,7 @@ button {
 }
 
 /* ==========================================================================
-   Badges / Pills ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â echoes mobile-app "verified" chips
+   Badges / Pills ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â echoes mobile-app "verified" chips
    ========================================================================== */
 
 .badge-rentify {
@@ -604,7 +604,7 @@ button {
 }
 
 /* ==========================================================================
-   Cards ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â mirror the rounded, bordered "app card" language
+   Cards ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â mirror the rounded, bordered "app card" language
    ========================================================================== */
 
 .card-rentify {
@@ -659,7 +659,7 @@ button {
 
 
 /* ==========================================================================
-   Phone Mockup ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â the signature ecosystem element
+   Phone Mockup ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â the signature ecosystem element
    ========================================================================== */
 
 .phone-mockup {
@@ -949,7 +949,7 @@ button {
   background-image: none;
   font-family: 'bootstrap-icons';
   content: '\F4FE';
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   transition: transform var(--duration-base) var(--ease-standard);
 }
 
@@ -1337,12 +1337,16 @@ textarea.form-control-rentify {
   display: inline-flex;
   align-items: center;
   gap: var(--space-3xs);
-  font-size: var(--font-size-micro);
+  font-size: 12px;
   font-weight: var(--font-weight-semibold);
   letter-spacing: var(--letter-spacing-eyebrow);
   text-transform: uppercase;
   color: var(--color-text-tertiary);
   margin-bottom: var(--space-sm);
+}
+
+.workflow-node .workflow-node-label i {
+  font-size: var(--font-size-body);
 }
 
 /* Customer branch */
