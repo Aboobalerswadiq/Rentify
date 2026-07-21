@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RENTIFY ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Design Token System
+   RENTIFY ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â Design Token System
    Monochrome, editorial, app-consistent design language.
    Every value referenced in this stylesheet flows from :root.
    ========================================================================== */
@@ -496,7 +496,7 @@ button {
 }
 
 /* ==========================================================================
-   Badges / Pills ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â echoes mobile-app "verified" chips
+   Badges / Pills ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â echoes mobile-app "verified" chips
    ========================================================================== */
 
 .badge-rentify {
@@ -622,7 +622,7 @@ button {
 }
 
 /* ==========================================================================
-   Cards ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â mirror the rounded, bordered "app card" language
+   Cards ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â mirror the rounded, bordered "app card" language
    ========================================================================== */
 
 .card-rentify {
@@ -677,8 +677,14 @@ button {
 
 
 /* ==========================================================================
-   Phone Mockup ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â the signature ecosystem element
+   Phone Mockup ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â the signature ecosystem element
    ========================================================================== */
+.phone-preview {
+  height: 440px;
+  /* Visible area */
+  overflow: hidden;
+  position: relative;
+}
 
 .phone-mockup {
   position: relative;
@@ -695,7 +701,8 @@ button {
   height: 100%;
   border-radius: calc(var(--radius-phone) - var(--phone-border-width));
   overflow: hidden;
-  background-color: var(--color-gray-100);
+  /* background-color: var(--color-gray-100); */
+  background-color: #FFFFFF;
   position: relative;
 }
 
@@ -707,7 +714,7 @@ button {
 
 .phone-mockup-notch {
   position: absolute;
-  top: 14px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: 90px;
@@ -731,12 +738,13 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  padding-top: 3rem;
   gap: var(--space-xs);
   background: linear-gradient(180deg, var(--color-gray-100) 0%, var(--color-gray-150) 100%);
   color: var(--color-text-tertiary);
   text-align: center;
-  padding: var(--space-lg);
+  padding: var(--space-4xl) var(--space-lg);
 }
 
 .app-screen-placeholder i {
@@ -1558,13 +1566,13 @@ textarea.form-control-rentify {
   /* position: relative;
     width: var(--phone-width); */
   /* aspect-ratio: 300 / 610; */
-  width: 200px;
-  height: 200px;
-  border-radius: var(--radius-phone);
+  width: 160px;
+  height: 160px;
+  /* border-radius: var(--radius-phone);
   border: 5px solid;
   border-color: var(--color-black);
   padding: 0.75rem;
-  box-shadow: var(--shadow-phone);
+  box-shadow: var(--shadow-phone); */
 }
 
 .qr {
