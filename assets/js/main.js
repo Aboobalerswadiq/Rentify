@@ -85,69 +85,187 @@ document.addEventListener('DOMContentLoaded', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
-  /* ---------- Support Contact Form (front-end only) ---------- */
-  var supportForm = document.getElementById('support-form');
-  if (supportForm) {
-    supportForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var successBox = document.getElementById('support-form-success');
-      supportForm.reset();
-      supportForm.classList.add('d-none');
-      if (successBox) {
-        successBox.classList.remove('d-none');
-      }
-    });
-  }
-
   /* ---------- Current Year in Footer ---------- */
   document.querySelectorAll('[data-current-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
 
-  var canvas = document.getElementById('workflowCanvas');
-  if (!canvas) return;
 
-  var svg = canvas.querySelector('.workflow-svg');
-  if (!svg) return;
+  /* ---------- How it works removed feature ---------- */
+  // var canvas = document.getElementById('workflowCanvas');
+  // if (!canvas) return;
 
-  var lines = Array.prototype.slice.call(svg.querySelectorAll('.workflow-line'));
-  var dots = Array.prototype.slice.call(svg.querySelectorAll('.workflow-dot'));
+  // var svg = canvas.querySelector('.workflow-svg');
+  // if (!svg) return;
 
-  lines.forEach(function (path) {
-    var length = path.getTotalLength();
-    path.style.strokeDasharray = length;
-    path.style.strokeDashoffset = length;
+  // var lines = Array.prototype.slice.call(svg.querySelectorAll('.workflow-line'));
+  // var dots = Array.prototype.slice.call(svg.querySelectorAll('.workflow-dot'));
+
+  // lines.forEach(function (path) {
+  //   var length = path.getTotalLength();
+  //   path.style.strokeDasharray = length;
+  //   path.style.strokeDashoffset = length;
+  // });
+
+  // function reveal() {
+  //   lines.forEach(function (path, index) {
+  //     path.style.transitionDelay = (index * 55) + 'ms';
+  //     path.style.strokeDashoffset = '0';
+  //   });
+  //   window.setTimeout(function () {
+  //     dots.forEach(function (dot, index) {
+  //       dot.style.transitionDelay = (index * 45) + 'ms';
+  //       dot.classList.add('is-visible');
+  //     });
+  //   }, 260);
+  // }
+
+  // if (!('IntersectionObserver' in window)) {
+  //   reveal();
+  //   return;
+  // }
+
+  // var workflowObserver = new IntersectionObserver(function (entries) {
+  //   entries.forEach(function (entry) {
+  //     if (entry.isIntersecting) {
+  //       reveal();
+  //       workflowObserver.unobserve(entry.target);
+  //     }
+  //   });
+  // }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+
+  // workflowObserver.observe(canvas);
+
+  /* ---------- FAQ ---------- */
+  var tabsNav = document.querySelector('.faq-tabs-nav');
+  if (!tabsNav) return;
+
+  var tabs = Array.prototype.slice.call(tabsNav.querySelectorAll('.faq-tab-item'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.faq-panel-block'));
+
+  function activate(tab, focusTab) {
+    var targetId = tab.getAttribute('data-target');
+    if (!targetId || tab.classList.contains('is-active')) {
+      if (focusTab) tab.focus();
+      return;
+    }
+
+    tabs.forEach(function (t) {
+      var isActive = t === tab;
+      t.classList.toggle('is-active', isActive);
+      t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      t.tabIndex = isActive ? 0 : -1;
+    });
+
+    panels.forEach(function (panel) {
+      var show = panel.id === targetId;
+      panel.classList.toggle('active', show);
+      panel.hidden = !show;
+    });
+
+    if (focusTab) tab.focus();
+  }
+
+  tabsNav.addEventListener('click', function (event) {
+    var tab = event.target.closest('.faq-tab-item');
+    if (tab) activate(tab, false);
   });
 
-  function reveal() {
-    lines.forEach(function (path, index) {
-      path.style.transitionDelay = (index * 55) + 'ms';
-      path.style.strokeDashoffset = '0';
-    });
-    window.setTimeout(function () {
-      dots.forEach(function (dot, index) {
-        dot.style.transitionDelay = (index * 45) + 'ms';
-        dot.classList.add('is-visible');
-      });
-    }, 260);
-  }
+  tabsNav.addEventListener('keydown', function (event) {
+    var currentIndex = tabs.indexOf(document.activeElement);
+    if (currentIndex === -1) return;
 
-  if (!('IntersectionObserver' in window)) {
-    reveal();
-    return;
-  }
+    var targetIndex = null;
 
-  var workflowObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        reveal();
-        workflowObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+    switch (event.key) {
+      case 'ArrowDown':
+      case 'ArrowRight':
+        targetIndex = (currentIndex + 1) % tabs.length;
+        break;
+      case 'ArrowUp':
+      case 'ArrowLeft':
+        targetIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+        break;
+      case 'Home':
+        targetIndex = 0;
+        break;
+      case 'End':
+        targetIndex = tabs.length - 1;
+        break;
+      default:
+        return;
+    }
 
-  workflowObserver.observe(canvas);
-
-
+    event.preventDefault();
+    activate(tabs[targetIndex], true);
+  });
 });
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   var tabsNav = document.querySelector('.faq-tabs-nav');
+//   if (!tabsNav) return;
+
+//   var tabs = Array.prototype.slice.call(tabsNav.querySelectorAll('.faq-tab-item'));
+//   var panels = Array.prototype.slice.call(document.querySelectorAll('.faq-panel-block'));
+
+//   function activate(tab, focusTab) {
+//     var targetId = tab.getAttribute('data-target');
+//     if (!targetId || tab.classList.contains('is-active')) {
+//       if (focusTab) tab.focus();
+//       return;
+//     }
+
+//     tabs.forEach(function (t) {
+//       var isActive = t === tab;
+//       t.classList.toggle('is-active', isActive);
+//       t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+//       t.tabIndex = isActive ? 0 : -1;
+//     });
+
+//     panels.forEach(function (panel) {
+//       var show = panel.id === targetId;
+//       panel.classList.toggle('active', show);
+//       panel.hidden = !show;
+//     });
+
+//     if (focusTab) tab.focus();
+//   }
+
+//   tabsNav.addEventListener('click', function (event) {
+//     var tab = event.target.closest('.faq-tab-item');
+//     if (tab) activate(tab, false);
+//   });
+
+//   tabsNav.addEventListener('keydown', function (event) {
+//     var currentIndex = tabs.indexOf(document.activeElement);
+//     if (currentIndex === -1) return;
+
+//     var targetIndex = null;
+
+//     switch (event.key) {
+//       case 'ArrowDown':
+//       case 'ArrowRight':
+//         targetIndex = (currentIndex + 1) % tabs.length;
+//         break;
+//       case 'ArrowUp':
+//       case 'ArrowLeft':
+//         targetIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+//         break;
+//       case 'Home':
+//         targetIndex = 0;
+//         break;
+//       case 'End':
+//         targetIndex = tabs.length - 1;
+//         break;
+//       default:
+//         return;
+//     }
+
+//     event.preventDefault();
+//     activate(tabs[targetIndex], true);
+//   });
+// });
+
+

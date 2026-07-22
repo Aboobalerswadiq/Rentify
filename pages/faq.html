@@ -62,10 +62,255 @@
           as a customer or rental business.</p>
       </div>
     </section>
+
     <section class="section">
       <div class="container-rentify">
 
-        <!-- General -->
+        <div class="faq-layout-card" data-animate>
+
+          <nav class="faq-tabs-nav" role="tablist" aria-label="FAQ categories" aria-orientation="vertical">
+            <button type="button" class="faq-tab-item is-active" role="tab" id="faq-tab-general"
+              data-target="faq-panel-general" aria-selected="true" aria-controls="faq-panel-general" tabindex="0">
+              <span class="faq-tab-icon" aria-hidden="true"><i class="bi bi-grid-1x2"></i></span>
+              <span class="faq-tab-copy">
+                <span class="faq-tab-title">General</span>
+                <span class="faq-tab-desc">Platform information</span>
+              </span>
+            </button>
+            <button type="button" class="faq-tab-item" role="tab" id="faq-tab-customer" data-target="faq-panel-customer"
+              aria-selected="false" aria-controls="faq-panel-customer" tabindex="-1">
+              <span class="faq-tab-icon" aria-hidden="true"><i class="bi bi-person"></i></span>
+              <span class="faq-tab-copy">
+                <span class="faq-tab-title">Customer</span>
+                <span class="faq-tab-desc">Booking &amp; rentals</span>
+              </span>
+            </button>
+            <button type="button" class="faq-tab-item" role="tab" id="faq-tab-vendor" data-target="faq-panel-vendor"
+              aria-selected="false" aria-controls="faq-panel-vendor" tabindex="-1">
+              <span class="faq-tab-icon" aria-hidden="true"><i class="bi bi-shop"></i></span>
+              <span class="faq-tab-copy">
+                <span class="faq-tab-title">Partner</span>
+                <span class="faq-tab-desc">Business management</span>
+              </span>
+            </button>
+          </nav>
+
+          <div class="faq-panels">
+
+            <!-- General -->
+            <div class="faq-panel-block active" id="faq-panel-general" role="tabpanel"
+              aria-labelledby="faq-tab-general">
+              <div class="accordion accordion-rentify" id="faqGeneral">
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#g1">
+                      What is Rentify?
+                    </button>
+                  </h3>
+                  <div id="g1" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                    <div class="accordion-body">
+                      Rentify is an equipment rental marketplace that connects customers with verified rental
+                      businesses,
+                      making it easy to find, book, and manage equipment rentals from your mobile device.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#g2">
+                      Do I need an account to use Rentify?
+                    </button>
+                  </h3>
+                  <div id="g2" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                    <div class="accordion-body">
+                      Yes. Creating an account allows you to book equipment, manage rentals, track bookings, and
+                      securely
+                      access your rental history.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#g3">
+                      Is Rentify available for both customers and rental businesses?
+                    </button>
+                  </h3>
+                  <div id="g3" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
+                    <div class="accordion-body">
+                      Yes. Rentify offers separate mobile apps for customers looking to rent equipment and vendors
+                      managing
+                      rental businesses.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Customer -->
+            <div class="faq-panel-block" id="faq-panel-customer" role="tabpanel" aria-labelledby="faq-tab-customer"
+              hidden>
+              <div class="accordion accordion-rentify" id="faqCustomers">
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#c1">
+                      How do I book equipment?
+                    </button>
+                  </h3>
+                  <div id="c1" class="accordion-collapse collapse" data-bs-parent="#faqCustomers">
+                    <div class="accordion-body">
+                      Browse available equipment, choose your rental dates, customize your booking if needed, and submit
+                      your
+                      request directly through the app.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#c2">
+                      Can I book multiple equipment items at once?
+                    </button>
+                  </h3>
+                  <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqCustomers">
+                    <div class="accordion-body">
+                      Yes. You can rent multiple equipment items from the same vendor in a single booking for a faster
+                      and
+                      more convenient rental experience.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#c3">
+                      How can I track my booking?
+                    </button>
+                  </h3>
+                  <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqCustomers">
+                    <div class="accordion-body">
+                      Your booking status is updated in real time, allowing you to track confirmations, upcoming
+                      pickups,
+                      active rentals, and completed bookings.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#c4">
+                      Can I save multiple pickup addresses?
+                    </button>
+                  </h3>
+                  <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqCustomers">
+                    <div class="accordion-body">
+                      Yes. Save multiple pickup addresses in your account and select the most convenient one whenever
+                      you make
+                      a booking.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Vendor -->
+            <div class="faq-panel-block" id="faq-panel-vendor" role="tabpanel" aria-labelledby="faq-tab-vendor" hidden>
+              <div class="accordion accordion-rentify" id="faqVendors">
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#v1">
+                      How do I list my equipment?
+                    </button>
+                  </h3>
+                  <div id="v1" class="accordion-collapse collapse" data-bs-parent="#faqVendors">
+                    <div class="accordion-body">
+                      Create your business profile, add your equipment with images, pricing, specifications, and
+                      availability,
+                      then publish your listings to start receiving booking requests.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#v2">
+                      How do I manage booking requests?
+                    </button>
+                  </h3>
+                  <div id="v2" class="accordion-collapse collapse" data-bs-parent="#faqVendors">
+                    <div class="accordion-body">
+                      Review incoming requests, accept or decline bookings, and communicate directly with customers
+                      after a
+                      booking is confirmed.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#v3">
+                      Can I update my equipment details anytime?
+                    </button>
+                  </h3>
+                  <div id="v3" class="accordion-collapse collapse" data-bs-parent="#faqVendors">
+                    <div class="accordion-body">
+                      Yes. You can edit equipment information, pricing, availability, and images whenever needed from
+                      the
+                      Vendor App.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#v4">
+                      Can I view customer information after a booking is confirmed?
+                    </button>
+                  </h3>
+                  <div id="v4" class="accordion-collapse collapse" data-bs-parent="#faqVendors">
+                    <div class="accordion-body">
+                      Yes. Once a booking is confirmed, you can access the customer's profile details and contact them
+                      directly to coordinate the rental.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="full-container">
+        <div class="card-rentify-flat text-center mt-5" data-animate>
+          <h4 class="text-h4">Still have questions?</h4>
+          <p class="text-body mt-2 mb-3">Our support team is here to help.</p>
+          <a href="support.html" class="btn-rentify btn-primary-rentify">Contact Support</a>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="section">
+      <div class="container-rentify">
+
         <h3 class="text-h4 mb-3" data-animate>General</h3>
         <div class="accordion accordion-rentify mb-5" id="faqGeneral">
 
@@ -113,7 +358,6 @@
 
         </div>
 
-        <!-- Customer -->
         <h3 class="text-h4 mb-3" data-animate>For Customers</h3>
         <div class="accordion accordion-rentify mb-5" id="faqCustomers">
 
@@ -175,7 +419,6 @@
 
         </div>
 
-        <!-- Vendor -->
         <h3 class="text-h4 mb-3" data-animate>For Vendors</h3>
         <div class="accordion accordion-rentify mb-5" id="faqVendors">
 
@@ -237,7 +480,6 @@
 
         </div>
 
-        <!-- Support Card -->
         <div class="card-rentify-flat text-center" data-animate>
           <h4 class="text-h4">Still have questions?</h4>
           <p class="text-body mt-2 mb-3">
@@ -246,115 +488,6 @@
           <a href="support.html" class="btn-rentify btn-primary-rentify">
             Contact Support
           </a>
-        </div>
-
-      </div>
-    </section>
-    <!-- <section class="section">
-      <div class="container-rentify">
-        <h3 class="text-h4 mb-3" data-animate>General</h3>
-        <div class="accordion accordion-rentify mb-5" id="faqGeneral">
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#g1">What is Rentify?</button></h3>
-            <div id="g1" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
-              <div class="accordion-body">Rentify is an equipment rental marketplace with two apps — one for customers
-                who want to rent equipment, and one for vendors who want to list and manage rentals.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#g2">Is Rentify available in my city?</button></h3>
-            <div id="g2" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
-              <div class="accordion-body">Rentify is growing to new cities every month. Open the app and enter your
-                location to see vendors available near you.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#g3">Do I need an account to browse listings?</button></h3>
-            <div id="g3" class="accordion-collapse collapse" data-bs-parent="#faqGeneral">
-              <div class="accordion-body">You can browse without an account, but you'll need to sign up to message
-                vendors or make a booking.</div>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="text-h4 mb-3" data-animate>For Customers</h3>
-        <div class="accordion accordion-rentify mb-5" id="faqCustomers">
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#c1">How do I book equipment?</button></h3>
-            <div id="c1" class="accordion-collapse collapse" data-bs-parent="#faqCustomers">
-              <div class="accordion-body">Search for the equipment you need, choose your rental dates, and submit a
-                booking request. Most vendors confirm instantly.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#c2">What happens if equipment is damaged?</button></h3>
-            <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqCustomers">
-              <div class="accordion-body">Each listing shows the vendor's deposit and damage policy before you book, so
-                you know exactly what's expected.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#c3">Can I cancel a booking?</button></h3>
-            <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqCustomers">
-              <div class="accordion-body">Yes. Cancellation terms are set by each vendor and shown on the listing before
-                you confirm your booking.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#c4">How do I pay?</button></h3>
-            <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqCustomers">
-              <div class="accordion-body">All payments happen securely in-app using your saved payment method.</div>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="text-h4 mb-3" data-animate>For Vendors</h3>
-        <div class="accordion accordion-rentify mb-5" id="faqVendors">
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#v1">How do I become a verified vendor?</button></h3>
-            <div id="v1" class="accordion-collapse collapse" data-bs-parent="#faqVendors">
-              <div class="accordion-body">Register your business in the Vendor App and complete the identity and
-                business verification steps. This typically takes one to two business days.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#v2">Is listing equipment free?</button></h3>
-            <div id="v2" class="accordion-collapse collapse" data-bs-parent="#faqVendors">
-              <div class="accordion-body">Yes, vendors can start on a free plan. Optional subscription tiers unlock
-                advanced analytics and promotional tools.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#v3">How and when do I get paid?</button></h3>
-            <div id="v3" class="accordion-collapse collapse" data-bs-parent="#faqVendors">
-              <div class="accordion-body">Payouts are released to your linked account after each completed rental,
-                according to your payout schedule in the Vendor App.</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#v4">Can I manage multiple locations?</button></h3>
-            <div id="v4" class="accordion-collapse collapse" data-bs-parent="#faqVendors">
-              <div class="accordion-body">Yes, the Vendor App supports multiple locations and inventories under a single
-                business account.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-rentify-flat text-center" data-animate>
-          <h4 class="text-h4">Still have questions?</h4>
-          <p class="text-body mt-2 mb-3">Our support team is here to help.</p>
-          <a href="support.html" class="btn-rentify btn-primary-rentify">Contact Support</a>
         </div>
 
       </div>
