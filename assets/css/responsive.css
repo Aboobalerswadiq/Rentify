@@ -143,7 +143,7 @@
   }
 
   .cta-band {
-    padding: var(--space-xl) var(--space-md);
+    padding: var(--space-xl) 0 0 0 !important;
   }
 
   .text-display {
@@ -170,30 +170,47 @@
   .accordion-rentify .accordion-button {
     font-size: 1.125rem;
   }
-}
 
-/* ---------- Small Mobile (up to 480px) ---------- */
-@media (max-width: 480px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
+  .step-connected-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
   }
 
-  .back-to-top {
-    right: var(--space-md);
-    bottom: var(--space-md);
-    width: 44px;
-    height: 44px;
+  .vendor-benifit {
+    flex-direction: column !important;
   }
+
+  .cta-band {
+    background-position: 0;
+  }
+
+  .phone-preview {
+    padding-top: 1rem;
+  }
+
+  /* ---------- Small Mobile (up to 480px) ---------- */
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .back-to-top {
+      right: var(--space-md);
+      bottom: var(--space-md);
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  /* ---------- No horizontal scroll safeguard ---------- */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
 }
-
-/* ---------- No horizontal scroll safeguard ---------- */
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-
 
 /* ---------- Responsive: Tablet ---------- */
 
