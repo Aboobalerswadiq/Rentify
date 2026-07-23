@@ -1191,7 +1191,20 @@ textarea.form-control-rentify {
   overflow: hidden;
 }
 
-.partner-hero .cta-band {}
+.partner-hero .cta-band {
+  background-image: url(../images/partner_banner_bg.jpg);
+  object-fit: cover;
+  background-position: 0;
+}
+
+.partner-download .cta-band {
+  background-image: url(../images/heavy_equip_2.png);
+  background-position: 0rem -2rem;
+}
+
+.partner-download .cta-band::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 .partner-hero {
   padding-top: 84px !important;
@@ -1725,10 +1738,10 @@ textarea.form-control-rentify {
   box-shadow: var(--shadow-phone); */
 }
 
-.qr-box.partner-qr{
-    /* aspect-ratio: 300 / 610; */
-    width: 120px;
-    height: 120px;
+.qr-box.partner-qr {
+  /* aspect-ratio: 300 / 610; */
+  width: 120px;
+  height: 120px;
 }
 
 .qr {

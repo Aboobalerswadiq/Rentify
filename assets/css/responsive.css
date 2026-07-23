@@ -219,6 +219,10 @@
     margin-top: 3rem !important;
   }
 
+  .partner-download .cta-band {
+    background-position: 0;
+  }
+
   /* ---------- Small Mobile (up to 480px) ---------- */
   @media (max-width: 480px) {
     .footer-grid {
@@ -406,6 +410,7 @@
   .faq-layout-card {
     border: none;
     box-shadow: none;
+    border-radius: 0;
   }
 
   .faq-tabs-nav {
