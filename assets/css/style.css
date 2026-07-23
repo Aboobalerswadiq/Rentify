@@ -1914,18 +1914,6 @@ textarea.form-control-rentify {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes faqPanelFade {
   from {
     opacity: 0;
@@ -1941,71 +1929,5 @@ textarea.form-control-rentify {
 @media (prefers-reduced-motion: reduce) {
   .faq-panel-block.active {
     animation: none;
-  }
-}
-
-/* ---------- Responsive: Tablet ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â tabs above accordion ---------- */
-
-@media (max-width: 991.98px) {
-  .faq-layout-card {
-    flex-direction: column;
-  }
-
-  .faq-tabs-nav {
-    width: 100%;
-    flex: 0 0 auto;
-    flex-direction: row;
-    border-right: none;
-    border-bottom: var(--border-width) solid var(--color-border);
-  }
-
-  .faq-tab-item {
-    flex: 1 1 0;
-  }
-
-  .faq-panels {
-    width: 100%;
-  }
-}
-
-/* ---------- Responsive: Mobile ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â horizontally scrollable pills ---------- */
-
-@media (max-width: 575.98px) {
-  .faq-tabs-nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: var(--space-2xs);
-    padding: var(--space-md);
-  }
-
-  .faq-tabs-nav::-webkit-scrollbar {
-    display: none;
-  }
-
-  .faq-tab-item {
-    flex: 0 0 auto;
-    width: auto;
-    padding: var(--space-2xs) var(--space-md);
-    border-radius: var(--radius-pill);
-  }
-
-  .faq-tab-item:hover {
-    transform: none;
-  }
-
-  .faq-tab-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-  }
-
-  .faq-tab-desc {
-    display: none;
-  }
-
-  .faq-panels {
-    padding: var(--space-md);
   }
 }

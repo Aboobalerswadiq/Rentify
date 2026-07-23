@@ -86,6 +86,26 @@
     grid-template-columns: 1fr 1fr;
     row-gap: var(--space-xl);
   }
+
+  .faq-layout-card {
+    flex-direction: column;
+  }
+
+  .faq-tabs-nav {
+    width: 100%;
+    flex: 0 0 auto;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .faq-tab-item {
+    flex: 1 1 0;
+  }
+
+  .faq-panels {
+    width: 100%;
+  }
 }
 
 /* ---------- Mobile (up to 767px) ---------- */
@@ -185,14 +205,18 @@
     background-position: 0;
   }
 
-  .phone-preview {
+  .phone-preview.qr-main {
     padding-top: 4rem;
     transform: scale(1.5);
     height: 560px;
   }
 
-  .app-screen-placeholder {
+  .app-screen-placeholder.qr-main {
     padding: var(--space-3xl) var(--space-lg);
+  }
+
+  .document-preview {
+    margin-top: 3rem !important;
   }
 
   /* ---------- Small Mobile (up to 480px) ---------- */
@@ -339,5 +363,62 @@
 @media (max-width: 575.98px) {
   .workflow-node:not(.wf-node--hub)::before {
     margin-left: var(--space-sm);
+  }
+
+  .faq-tabs-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: var(--space-2xs);
+    padding: 0;
+  }
+
+  .faq-tabs-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .faq-tab-item {
+    flex: 0 0 auto;
+    width: auto;
+    padding: var(--space-2xs) var(--space-md);
+    border-radius: var(--radius-pill);
+  }
+
+  .faq-tab-item:hover {
+    transform: none;
+  }
+
+  .faq-tab-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .faq-tab-desc {
+    display: none;
+  }
+
+  .faq-panels {
+    padding: var(--space-sm) 0;
+  }
+
+  .faq-layout-card {
+    border: none;
+    box-shadow: none;
+  }
+
+  .faq-tabs-nav {
+    background-color: transparent;
+    border-bottom: none;
+    justify-content: space-between;
+  }
+
+  .faq-tab-item.is-active {
+    box-shadow: none;
+  }
+
+  .faq-tab-item .faq-tab-icon {
+    display: none;
   }
 }
