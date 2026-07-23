@@ -186,7 +186,13 @@
   }
 
   .phone-preview {
-    padding-top: 1rem;
+    padding-top: 4rem;
+    transform: scale(1.5);
+    height: 560px;
+  }
+
+  .app-screen-placeholder {
+    padding: var(--space-3xl) var(--space-lg);
   }
 
   /* ---------- Small Mobile (up to 480px) ---------- */
@@ -198,8 +204,8 @@
     .back-to-top {
       right: var(--space-md);
       bottom: var(--space-md);
-      width: 44px;
-      height: 44px;
+      width: 56px;
+      height: 56px;
     }
   }
 
@@ -209,7 +215,6 @@
     max-width: 100%;
     overflow-x: hidden;
   }
-
 }
 
 /* ---------- Responsive: Tablet ---------- */
