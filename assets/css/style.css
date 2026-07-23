@@ -322,7 +322,7 @@ button {
 
 .text-h2 {
   font-size: var(--font-size-h2);
-  line-height: var(--line-height-heading);
+  line-height: var(--line-height-body);
   letter-spacing: var(--letter-spacing-heading);
   font-weight: var(--font-weight-semibold);
   margin: 0;
